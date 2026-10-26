@@ -162,6 +162,75 @@
       opacity: 0.8;
       text-decoration: underline;
     }
+
+    /* Heading & Typography Enhancements */
+    .timeline-main-heading {
+      font-family: var(--font-display);
+      font-size: 2.35rem;
+      font-weight: 500;
+      line-height: 1.15;
+      color: var(--foreground);
+      letter-spacing: 0.01em;
+      margin-top: 4px;
+    }
+    @media (min-width: 400px) {
+      .timeline-main-heading {
+        font-size: 2.75rem;
+      }
+    }
+
+    .couple-main-name {
+      font-family: var(--font-display);
+      font-size: 2.75rem;
+      color: var(--foreground);
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+
+    .event-desc {
+      font-size: 0.88rem;
+      color: var(--foreground);
+      opacity: 0.85;
+      font-style: italic;
+      line-height: 1.5;
+      margin-top: 9px;
+    }
+
+    /* Event Timing Badge & Location Row */
+    .event-timing-badge {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px 8px;
+      margin-top: 13px;
+      padding: 9px 13px;
+      background: rgba(180, 140, 90, 0.1);
+      border: 1px solid rgba(180, 140, 90, 0.28);
+      border-radius: 6px;
+      color: var(--primary);
+      font-size: 0.90rem;
+      font-weight: 500;
+      line-height: 1.4;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .event-location-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      margin-top: 10px;
+      font-size: 0.92rem;
+      color: var(--foreground);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    /* Readability size increases for micro-texts */
+    .text-micro-caption {
+      font-size: 0.76rem !important;
+      letter-spacing: 0.22em !important;
+      text-transform: uppercase !important;
+    }
   </style>
 </head>
 <body>
@@ -321,13 +390,14 @@
             </p>
             
             <div class="my-5 flex flex-col items-center">
-              <span class="font-display text-[2.25rem] text-foreground leading-tight">Apurva</span>
-              <span class="script text-xl text-primary my-1">with</span>
-              <span class="font-display text-[2.25rem] text-foreground leading-tight">Srishti</span>
-              <p class="mt-3 text-[0.68rem] uppercase tracking-airy text-muted-foreground">
-                Daughter of Mrs. Seema Singh &amp; Mr. Sanjay Singh
-              </p>
+              <span class="couple-main-name">Apurva</span>
+              <span class="script text-lg text-primary my-0.5">with</span>
+              <span class="couple-main-name">Srishti</span>
             </div>
+
+            <p class="font-display text-[1.12rem] leading-relaxed text-foreground/90">
+              Daughter of <strong class="font-medium text-foreground">Mrs. Seema &amp; Mr. Sanjay Singh</strong>
+            </p>
 
             <p class="mt-3 font-display text-sm uppercase tracking-airy text-primary font-medium">
               On Wednesday, 25th November, 2026
@@ -363,9 +433,8 @@
         
         <div class="reveal" data-visible="false">
           <div class="text-center">
-            <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">The Auspicious Beginnings</p>
-            <h2 class="mt-2 font-display text-[2rem] leading-tight text-foreground">Celebrations</h2>
-            <p class="mt-2 max-w-xs mx-auto text-xs italic text-muted-foreground leading-relaxed">
+            <h2 class="font-display text-[2.35rem] leading-tight text-foreground">The Auspicious Beginnings</h2>
+            <p class="mt-2.5 max-w-xs mx-auto text-xs italic text-muted-foreground leading-relaxed">
               ~ marked with peele chawal and divine prayers, we begin our wedding journey under Lord Ganesha's watchful grace ~
             </p>
             <div class="flex items-center justify-center gap-3 py-6 text-primary/70">
@@ -386,11 +455,11 @@
                   <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">❋</span>
                   <div class="min-w-0">
                     <h3 class="truncate font-display text-2xl">Peele Chawal</h3>
-                    <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">Friday, 20th November 2026 · 8:00 P.M.</p>
                   </div>
                 </div>
-                <p class="mt-4 text-sm text-foreground/85 font-medium">110-A, Kailash Puri, Tonk Road, Jaipur</p>
-                <p class="mt-1 text-xs italic text-muted-foreground">~ marked with peele chawal and divine prayers, we begin our wedding journey under Lord Ganesha's watchful grace ~</p>
+                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">~ marked with peele chawal and divine prayers, we begin our wedding journey under Lord Ganesha's watchful grace ~</p>
+                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Friday, 20th November 2026 · 8:00 P.M.</p>
+                <p class="mt-1 text-sm text-foreground/85 font-medium">110-A, Kailash Puri, Tonk Road, Jaipur</p>
               </article>
             </div>
           </li>
@@ -403,11 +472,11 @@
                   <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">❖</span>
                   <div class="min-w-0">
                     <h3 class="truncate font-display text-2xl">Sankdi Bindayak</h3>
-                    <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">Saturday, 21st November 2026 · 10:00 A.M. onwards</p>
                   </div>
                 </div>
-                <p class="mt-4 text-sm text-foreground/85 font-medium">110-A, Kailash Puri, Tonk Road, Jaipur</p>
-                <p class="mt-1 text-xs italic text-muted-foreground">Beginning the sacred rituals with family blessings and traditional festivities.</p>
+                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">Beginning the sacred rituals with family blessings and traditional festivities.</p>
+                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Saturday, 21st November 2026 · 10:00 A.M. onwards</p>
+                <p class="mt-1 text-sm text-foreground/85 font-medium">110-A, Kailash Puri, Tonk Road, Jaipur</p>
               </article>
             </div>
           </li>
@@ -420,11 +489,11 @@
                   <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">❁</span>
                   <div class="min-w-0">
                     <h3 class="truncate font-display text-2xl">Mehndi</h3>
-                    <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">Sunday, 22nd November 2026 · Lunch 12:00 P.M. onwards</p>
                   </div>
                 </div>
-                <p class="mt-4 text-sm text-foreground/85 font-medium">Venue: 110-A, Kailash Puri, Tonk Road, Jaipur</p>
-                <p class="mt-1 text-xs italic text-muted-foreground">&lsquo;Mehndi ki Mehek&rsquo; ~ an afternoon of color, conversation &amp; celebratory vibes ~</p>
+                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">&lsquo;Mehndi ki Mehek&rsquo; ~ an afternoon of color, conversation &amp; celebratory vibes ~</p>
+                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Sunday, 22nd November 2026 · Lunch 12:00 P.M. onwards</p>
+                <p class="mt-1 text-sm text-foreground/85 font-medium">Venue: 110-A, Kailash Puri, Tonk Road, Jaipur</p>
               </article>
             </div>
           </li>
@@ -437,12 +506,11 @@
                   <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">☀</span>
                   <div class="min-w-0">
                     <h3 class="truncate font-display text-2xl">Haldi</h3>
-                    <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">Monday, 23rd November 2026 · 5:30 P.M. onwards</p>
                   </div>
                 </div>
-                <p class="mt-4 text-sm text-foreground/85 font-medium">Venue: Poolside, Hotel Clarks Amer, Jaipur</p>
-                <p class="mt-1 text-xs text-primary font-medium">Dinner starting 7:30 P.M.</p>
-                <p class="mt-1 text-xs italic text-muted-foreground">Glow... Before the Vows ~ Music on, turmeric high, poolside vibes under the sky ~</p>
+                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">Glow... Before the Vows ~ Music on, turmeric high, poolside vibes under the sky ~</p>
+                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Monday, 23rd November 2026 · 5:30 P.M. onwards · Dinner: 7:30 P.M.</p>
+                <p class="mt-1 text-sm text-foreground/85 font-medium">Venue: Poolside, Hotel Clarks Amer, Jaipur</p>
               </article>
             </div>
           </li>
@@ -455,12 +523,11 @@
                   <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">✧</span>
                   <div class="min-w-0">
                     <h3 class="truncate font-display text-2xl">Mayra</h3>
-                    <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">Tuesday, 24th November 2026 · 11:00 A.M. onwards</p>
                   </div>
                 </div>
-                <p class="mt-4 text-sm text-foreground/85 font-medium">Venue: Swarna Mahal, Banquet Hall, Hotel Clarks Amer, Jaipur</p>
-                <p class="mt-1 text-xs text-primary font-medium">Lunch starting 12:30 P.M.</p>
-                <p class="mt-1 text-xs italic text-muted-foreground">Blessings from Nanihal ~ With dhol, chunari and open arms &mdash; honoring the love of our maternal roots ~</p>
+                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">Blessings from Nanihal ~ With dhol, chunari and open arms &mdash; honoring the love of our maternal roots ~</p>
+                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Tuesday, 24th November 2026 · 11:00 A.M. onwards · Lunch: 12:30 P.M.</p>
+                <p class="mt-1 text-sm text-foreground/85 font-medium">Venue: Swarna Mahal, Banquet Hall, Hotel Clarks Amer, Jaipur</p>
               </article>
             </div>
           </li>
@@ -473,12 +540,11 @@
                   <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">♫</span>
                   <div class="min-w-0">
                     <h3 class="truncate font-display text-2xl">Musical Night</h3>
-                    <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">Tuesday, 24th November 2026 · 6:30 P.M. onwards</p>
                   </div>
                 </div>
-                <p class="mt-4 text-sm text-foreground/85 font-medium">Venue: Semal Bagh (Front Lawn), Hotel Clarks Amer, Jaipur</p>
-                <p class="mt-1 text-xs text-primary font-medium">Cocktail &amp; Dinner: 7:30 P.M. onwards</p>
-                <p class="mt-1 text-xs italic text-muted-foreground">Sip, Sing &amp; Celebrate ~ Ghoomar beats, modern treats and flowing drinks &mdash; let's celebrate royal style! ~</p>
+                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">Sip, Sing &amp; Celebrate ~ Ghoomar beats, modern treats and flowing drinks &mdash; let's celebrate royal style! ~</p>
+                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Tuesday, 24th November 2026 · 6:30 P.M. onwards · Cocktail &amp; Dinner: 7:30 P.M.</p>
+                <p class="mt-1 text-sm text-foreground/85 font-medium">Venue: Semal Bagh (Front Lawn), Hotel Clarks Amer, Jaipur</p>
               </article>
             </div>
           </li>
@@ -491,11 +557,11 @@
                   <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">❋</span>
                   <div class="min-w-0">
                     <h3 class="truncate font-display text-2xl">Nikaasi</h3>
-                    <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">Wednesday, 25th November 2026 · 4:30 P.M.</p>
                   </div>
                 </div>
-                <p class="mt-4 text-sm text-foreground/85 font-medium">Venue: 110-A, Kailash Puri, Tonk Road, Jaipur</p>
-                <p class="mt-1 text-xs italic text-muted-foreground">The ceremonial departure of the groom surrounded by family blessings.</p>
+                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">The ceremonial departure of the groom surrounded by family blessings.</p>
+                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Wednesday, 25th November 2026 · 4:30 P.M.</p>
+                <p class="mt-1 text-sm text-foreground/85 font-medium">Venue: 110-A, Kailash Puri, Tonk Road, Jaipur</p>
               </article>
             </div>
           </li>
@@ -508,11 +574,11 @@
                   <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">❖</span>
                   <div class="min-w-0">
                     <h3 class="truncate font-display text-2xl">Baraat</h3>
-                    <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">Wednesday, 25th November 2026 · 6:00 P.M. sharp</p>
                   </div>
                 </div>
-                <p class="mt-4 text-sm text-foreground/85 font-medium">Assembly: Gokul Vatika, near Jawahar Circle</p>
-                <p class="mt-1 text-xs text-muted-foreground">Baraat will assemble at Gokul Vatika and proceed to Rama Bagh, Hotel Clarks Amer.</p>
+                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">Baraat will assemble at Gokul Vatika and proceed to Rama Bagh, Hotel Clarks Amer.</p>
+                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Wednesday, 25th November 2026 · 6:00 P.M. sharp</p>
+                <p class="mt-1 text-sm text-foreground/85 font-medium">Assembly: Gokul Vatika, near Jawahar Circle</p>
               </article>
             </div>
           </li>
@@ -525,15 +591,11 @@
                   <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary text-primary font-bold">☀</span>
                   <div class="min-w-0">
                     <h3 class="truncate font-display text-2xl">Wedding &amp; Panigrahan</h3>
-                    <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">Wednesday, 25th November 2026</p>
                   </div>
                 </div>
-                <p class="mt-4 text-sm text-foreground/90 font-medium">Venue: Rama Bagh, Hotel Clarks Amer, Jaipur</p>
-                <div class="mt-2.5 flex items-center justify-between text-xs border-y border-primary/20 py-2">
-                  <span class="font-medium text-primary">Dinner: starting 8:00 P.M.</span>
-                  <span class="font-medium text-foreground">Panigrahan Sanskar: Midnight</span>
-                </div>
-                <p class="mt-2 text-xs italic text-muted-foreground">Written in the Stars ~ From the majesty of Rajasthan to the timeless grace of Bihar, two worlds unite in sacred vows ~</p>
+                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">Written in the Stars ~ From the majesty of Rajasthan to the timeless grace of Bihar, two worlds unite in sacred vows ~</p>
+                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Wednesday, 25th November 2026 · Dinner: 8:00 P.M. · Panigrahan: Midnight</p>
+                <p class="mt-1 text-sm text-foreground/90 font-medium">Venue: Rama Bagh, Hotel Clarks Amer, Jaipur</p>
               </article>
             </div>
           </li>
@@ -681,10 +743,11 @@
             <div class="card-soft p-5 text-center">
               <p class="script text-lg text-primary">Showers of love</p>
               <div class="mt-3 space-y-1.5 font-display text-base text-foreground/90">
+                <p>Dr. R.K. Singh <span class="text-xs text-muted-foreground font-sans">(Nana)</span></p>
                 <p>Kiran Sharma <span class="text-xs text-muted-foreground font-sans">(Nani)</span></p>
                 <p>Aditi - Mukul</p>
                 <p>Avni &amp; Diva</p>
-                <p class="text-primary font-medium pt-1">Udit</p>
+                <p>Udit</p>
               </div>
             </div>
 
