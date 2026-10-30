@@ -155,7 +155,7 @@
       font-size: 0.8rem;
       color: var(--primary);
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       transition: opacity 0.2s ease;
     }
     .rsvp-call-btn:hover {
@@ -187,49 +187,155 @@
       letter-spacing: 0.02em;
     }
 
-    .event-desc {
-      font-size: 0.88rem;
-      color: var(--foreground);
-      opacity: 0.85;
-      font-style: italic;
-      line-height: 1.5;
-      margin-top: 9px;
+    :root {
+      --primary: #8a581e !important;
     }
 
-    /* Event Timing Badge & Location Row */
-    .event-timing-badge {
-      display: inline-flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 6px 8px;
-      margin-top: 13px;
-      padding: 9px 13px;
-      background: rgba(180, 140, 90, 0.1);
-      border: 1px solid rgba(180, 140, 90, 0.28);
-      border-radius: 6px;
-      color: var(--primary);
-      font-size: 0.90rem;
-      font-weight: 500;
-      line-height: 1.4;
-      width: 100%;
-      box-sizing: border-box;
+    /* All primary colored texts made slightly bold and richer */
+    .text-primary {
+      color: #8a581e !important;
+      font-weight: 600 !important;
     }
-    .event-location-row {
+
+    /* Hero couple title */
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3.0rem, 8.5vw, 4.2rem) !important;
+      line-height: 1.02 !important;
+      color: var(--foreground) !important;
+      margin-top: 0.5rem;
+    }
+
+    /* Shree Ganeshaya Namah - Darker & Auspicious, Single Line Guaranteed */
+    .ganesh-namah {
+      font-family: var(--font-script);
+      font-size: clamp(1.05rem, 4.4vw, 1.26rem) !important;
+      font-weight: 700 !important;
+      color: #6d3a08 !important;
+      letter-spacing: 0.02em;
+      text-shadow: 0 0.5px 1px rgba(109, 58, 8, 0.22);
+      display: inline-block;
+      white-space: nowrap !important;
+    }
+
+    /* Single line text utility - no truncation ellipsis */
+    .single-line-text {
+      white-space: nowrap !important;
+    }
+
+    /* Blessings subtitle - responsive, never overflows */
+    .blessings-subtitle {
+      font-size: clamp(0.66rem, 2.5vw, 0.76rem) !important;
+      letter-spacing: 0.08em !important;
+      line-height: 1.4 !important;
+      max-width: 100%;
+    }
+
+    /* Increased readability for small / caption text across entire theme */
+    .text-\[0\.62rem\],
+    .text-\[0\.64rem\],
+    .text-\[0\.66rem\],
+    .text-\[0\.68rem\],
+    .text-micro-caption {
+      font-size: 0.74rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.08em !important;
+    }
+    .text-\[0\.55rem\] {
+      font-size: 0.68rem !important;
+      font-weight: 500 !important;
+    }
+    .text-muted-foreground {
+      color: #5c5043 !important;
+    }
+
+    /* Family name single-line container */
+    .family-name-single-line {
+      white-space: nowrap !important;
+      font-size: clamp(0.88rem, 3.8vw, 1.45rem);
+      letter-spacing: 0.01em;
+      max-width: 100%;
+    }
+
+    /* Special request styling - fully written, never truncated */
+    .special-request-badge {
+      font-weight: 700 !important;
+      font-size: clamp(0.72rem, 3.2vw, 0.82rem) !important;
+      letter-spacing: 0.08em !important;
+      color: #8a581e !important;
+      white-space: nowrap !important;
+      display: inline-block;
+    }
+
+    /* Event card refined typography & structured centered timing */
+    .event-desc-top {
+      font-size: 0.86rem;
+      font-style: italic;
+      color: #5c5043;
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+    }
+    .event-timing-box {
+      margin-top: 0.75rem;
+      padding: 0.65rem 0.85rem;
+      background: rgba(138, 88, 30, 0.08);
+      border: 1px solid rgba(138, 88, 30, 0.22);
+      border-radius: 6px;
+      text-align: center;
+    }
+    .event-date-text {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--foreground);
+      text-align: center;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+    }
+    .event-multitime-container {
+      margin-top: 0.35rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .event-time-text {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #8a581e;
+      text-align: center;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+      margin-top: 0.35rem;
+    }
+    .event-multitime-container .event-time-text {
+      margin-top: 0;
+    }
+    .event-time-secondary {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #8a581e;
+      text-align: center;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+    }
+    .event-icon-inline {
+      display: inline-block;
+      vertical-align: -2px;
+      margin-right: 5px;
+      width: 15px;
+      height: 15px;
+      color: #8a581e;
+      flex-shrink: 0;
+    }
+    .event-venue-row {
       display: flex;
       align-items: flex-start;
-      gap: 7px;
-      margin-top: 10px;
-      font-size: 0.92rem;
+      gap: 0.5rem;
+      font-size: 0.88rem;
       color: var(--foreground);
       font-weight: 500;
-      line-height: 1.4;
-    }
-
-    /* Readability size increases for micro-texts */
-    .text-micro-caption {
-      font-size: 0.76rem !important;
-      letter-spacing: 0.22em !important;
-      text-transform: uppercase !important;
+      line-height: 1.45;
+      margin-top: 0.55rem;
     }
   </style>
 </head>
@@ -300,17 +406,17 @@
           <img id="floral-spray-right" src="assets/floral-spray.png" alt="" aria-hidden="true" width="1024" height="1024" class="pointer-events-none absolute -right-12 top-24 w-32 -scale-x-100 opacity-60 animate-float-soft" style="animation-delay:1.4s;transform:translate3d(0, 0px, 0)"/>
 
           <!-- Watercolor Couple Illustration -->
-          <img id="couple-illustration" src="assets/couple-walking.png" alt="Bride and groom walking hand in hand" width="1024" height="1536" class="pointer-events-none absolute left-1/2 -translate-x-1/2 object-contain animate-bloom drop-shadow-[0_18px_28px_rgba(92,80,68,0.18)]" style="width:clamp(165px, 49%, 225px); bottom:clamp(260px, 37svh, 305px); transform:translate3d(-50%, 0px, 0)"/>
+          <img id="couple-illustration" src="assets/couple-walking.png" alt="Bride and groom walking hand in hand" width="1024" height="1536" class="pointer-events-none absolute left-1/2 -translate-x-1/2 object-contain animate-bloom drop-shadow-[0_18px_28px_rgba(92,80,68,0.18)]" style="width:clamp(165px, 48%, 220px); bottom:clamp(285px, 40svh, 325px); transform:translate3d(-50%, 0px, 0)"/>
 
           <!-- Couple Names & Date Details -->
-          <div id="hero-text-content" class="relative flex min-h-[100svh] flex-col items-center justify-end px-6 pb-5 sm:pb-8 text-center pointer-events-none" style="transform:translate3d(0, 0px, 0)">
-            <p class="script text-lg text-primary animate-ink" style="animation-delay:0.4s">|| Shree Ganeshaya Namah ||</p>
-            <p class="mt-1 text-[0.64rem] uppercase tracking-airy text-muted-foreground animate-ink" style="animation-delay:0.55s">Wedding Invitation</p>
-            <h1 class="mt-2.5 font-display text-[3.15rem] leading-[1.02] text-foreground animate-ink" style="animation-delay:0.7s">
-              Apurva<span class="script mx-2 block text-2xl text-primary">&amp;</span>Srishti
+          <div id="hero-text-content" class="relative flex min-h-[100svh] flex-col items-center justify-end px-4 pb-5 sm:pb-8 text-center pointer-events-none" style="transform:translate3d(0, 0px, 0)">
+            <p class="ganesh-namah animate-ink single-line-text" style="animation-delay:0.4s; font-size:clamp(1.18rem, 4.8vw, 1.35rem) !important;">|| Shree Ganeshaya Namah ||</p>
+            <p class="mt-1 text-[0.76rem] uppercase tracking-wider text-muted-foreground animate-ink font-medium single-line-text" style="animation-delay:0.55s">Wedding Invitation</p>
+            <h1 class="hero-title animate-ink" style="animation-delay:0.7s">
+              Apurva<span class="script mx-2 block text-2xl text-primary font-bold">&amp;</span>Srishti
             </h1>
-            <p class="mt-4 text-[0.66rem] uppercase tracking-airy text-muted-foreground animate-ink" style="animation-delay:1s">Wednesday, 25 November 2026</p>
-            <p class="mt-2 text-[0.66rem] uppercase tracking-airy text-muted-foreground animate-ink" style="animation-delay:1.15s">Hotel Clarks Amer · Jaipur</p>
+            <p class="mt-3.5 text-[0.78rem] uppercase tracking-wider text-muted-foreground animate-ink font-medium single-line-text" style="animation-delay:1s">Wednesday, 25 November 2026</p>
+            <p class="mt-1.5 text-[0.78rem] uppercase tracking-wider text-muted-foreground animate-ink font-medium single-line-text" style="animation-delay:1.15s">Hotel Clarks Amer · Jaipur</p>
           </div>
         </header>
 
@@ -321,44 +427,44 @@
       <!-- COUNTDOWN TIMER SECTION -->
       <section class="px-6 py-14">
         <div class="reveal" data-visible="false">
-          <p class="text-center text-[0.62rem] uppercase tracking-airy text-muted-foreground">Counting down to the auspicious vows</p>
+          <p class="text-center text-[0.76rem] uppercase tracking-airy text-muted-foreground font-medium">Counting down to the auspicious vows</p>
           <div class="mt-6">
             <div class="flex items-start gap-2">
               
               <!-- Days -->
               <div class="flex flex-1 flex-col items-center gap-2">
                 <div class="relative w-full overflow-hidden card-soft px-1 py-3" style="perspective:320px">
-                  <span id="countdown-days" class="block origin-top text-center font-display text-[1.9rem] leading-none text-foreground">00</span>
+                  <span id="countdown-days" class="block origin-top text-center font-display text-[1.9rem] leading-none text-foreground font-medium">00</span>
                   <span class="pointer-events-none absolute inset-x-0 top-1/2 h-px bg-primary/25"></span>
                 </div>
-                <span class="text-[0.55rem] uppercase tracking-airy text-muted-foreground">Days</span>
+                <span class="text-[0.68rem] uppercase tracking-airy text-muted-foreground font-medium">Days</span>
               </div>
 
               <!-- Hours -->
               <div class="flex flex-1 flex-col items-center gap-2">
                 <div class="relative w-full overflow-hidden card-soft px-1 py-3" style="perspective:320px">
-                  <span id="countdown-hours" class="block origin-top text-center font-display text-[1.9rem] leading-none text-foreground">00</span>
+                  <span id="countdown-hours" class="block origin-top text-center font-display text-[1.9rem] leading-none text-foreground font-medium">00</span>
                   <span class="pointer-events-none absolute inset-x-0 top-1/2 h-px bg-primary/25"></span>
                 </div>
-                <span class="text-[0.55rem] uppercase tracking-airy text-muted-foreground">Hrs</span>
+                <span class="text-[0.68rem] uppercase tracking-airy text-muted-foreground font-medium">Hrs</span>
               </div>
 
               <!-- Minutes -->
               <div class="flex flex-1 flex-col items-center gap-2">
                 <div class="relative w-full overflow-hidden card-soft px-1 py-3" style="perspective:320px">
-                  <span id="countdown-minutes" class="block origin-top text-center font-display text-[1.9rem] leading-none text-foreground">00</span>
+                  <span id="countdown-minutes" class="block origin-top text-center font-display text-[1.9rem] leading-none text-foreground font-medium">00</span>
                   <span class="pointer-events-none absolute inset-x-0 top-1/2 h-px bg-primary/25"></span>
                 </div>
-                <span class="text-[0.55rem] uppercase tracking-airy text-muted-foreground">Min</span>
+                <span class="text-[0.68rem] uppercase tracking-airy text-muted-foreground font-medium">Min</span>
               </div>
 
               <!-- Seconds -->
               <div class="flex flex-1 flex-col items-center gap-2">
                 <div class="relative w-full overflow-hidden card-soft px-1 py-3" style="perspective:320px">
-                  <span id="countdown-seconds" class="block origin-top text-center font-display text-[1.9rem] leading-none text-foreground">00</span>
+                  <span id="countdown-seconds" class="block origin-top text-center font-display text-[1.9rem] leading-none text-foreground font-medium">00</span>
                   <span class="pointer-events-none absolute inset-x-0 top-1/2 h-px bg-primary/25"></span>
                 </div>
-                <span class="text-[0.55rem] uppercase tracking-airy text-muted-foreground">Sec</span>
+                <span class="text-[0.68rem] uppercase tracking-airy text-muted-foreground font-medium">Sec</span>
               </div>
 
             </div>
@@ -372,45 +478,54 @@
         
         <div class="reveal" data-visible="false">
           <div class="text-center">
-            <p class="script text-lg text-primary">|| Shree Ganeshaya Namah ||</p>
-            <p class="mt-2 text-[0.62rem] uppercase tracking-airy text-muted-foreground">With the blessings of God and our Parents</p>
-            <h2 class="mt-2 font-display text-[1.55rem] leading-tight text-foreground font-normal">
+            <p class="ganesh-namah single-line-text">|| Shree Ganeshaya Namah ||</p>
+            <p class="mt-2 uppercase text-muted-foreground font-medium blessings-subtitle">With the blessings of God and our Parents</p>
+            <h2 class="mt-2 font-display leading-tight text-foreground font-semibold family-name-single-line">
               Smt. Rama Chauhan &amp; Shri Govind Singh Chauhan
             </h2>
-            <div class="flex items-center justify-center gap-3 py-5 text-primary/70">
-              <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
-              <span class="text-[0.7rem] tracking-airy">❖</span>
-              <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary/50"></span>
+            <div class="flex items-center justify-center gap-3 py-5 text-primary">
+              <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary"></span>
+              <span class="text-[0.75rem] tracking-airy font-bold">❖</span>
+              <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary"></span>
             </div>
           </div>
 
           <div class="card-soft p-6 text-center">
-            <p class="font-display text-[1.12rem] leading-relaxed text-foreground/90">
-              <strong class="font-medium text-foreground">Mrs. Dimple &amp; Mr. Bineet Chauhan</strong> joyfully invite you to celebrate the wedding of their son
+            <p class="font-display text-[1.18rem] text-foreground font-semibold leading-tight">
+              Mrs. Dimple &amp; Mr. Bineet Chauhan
+            </p>
+            <p class="font-display text-[0.95rem] text-foreground/85 mt-1.5 leading-normal">
+              joyfully invite you to celebrate the wedding of their
+            </p>
+            <p class="font-display text-[1.08rem] text-primary font-bold mt-1 uppercase tracking-widest">
+              Son
             </p>
             
-            <div class="my-5 flex flex-col items-center">
-              <span class="couple-main-name">Apurva</span>
-              <span class="script text-lg text-primary my-0.5">with</span>
-              <span class="couple-main-name">Srishti</span>
+            <div class="my-4 flex flex-col items-center">
+              <span class="couple-main-name font-medium">Apurva</span>
+              <span class="script text-xl text-primary font-bold my-0.5">with</span>
+              <span class="couple-main-name font-medium">Srishti</span>
             </div>
 
-            <p class="font-display text-[1.12rem] leading-relaxed text-foreground/90">
-              Daughter of <strong class="font-medium text-foreground">Mrs. Seema &amp; Mr. Sanjay Singh</strong>
+            <p class="font-display text-[1.05rem] text-primary font-bold mt-1 uppercase tracking-widest">
+              Daughter of
+            </p>
+            <p class="font-display text-[1.18rem] text-foreground font-semibold mt-1 leading-tight">
+              Mrs. Seema &amp; Mr. Sanjay Singh
             </p>
 
-            <p class="mt-3 font-display text-sm uppercase tracking-airy text-primary font-medium">
+            <p class="mt-4 font-display text-sm uppercase tracking-wider text-primary font-bold">
               On Wednesday, 25th November, 2026
             </p>
 
-            <div class="mt-5 border-t border-primary/20 pt-4">
-              <p class="font-display text-[1.05rem] italic leading-relaxed text-foreground/85">
+            <div class="mt-5 border-t border-primary/25 pt-4">
+              <p class="font-display text-[1.08rem] italic leading-relaxed text-foreground/90">
                 &ldquo;May their journey together be filled with love, happiness, prosperity &amp; lifelong companionship.&rdquo;
               </p>
             </div>
 
-            <div class="mt-4 rounded-sm bg-primary/10 py-2.5 px-4 text-center">
-              <p class="text-[0.68rem] uppercase tracking-widest text-primary font-medium">
+            <div class="mt-4 rounded-sm bg-primary/10 py-2.5 px-3 text-center border border-primary/25">
+              <p class="special-request-badge uppercase text-primary font-bold">
                 Special Request : Udit Chauhan
               </p>
             </div>
@@ -418,8 +533,8 @@
 
           <!-- Journey Quote -->
           <div class="mt-8 text-center px-4">
-            <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">Written in the Stars</p>
-            <p class="mt-2 font-display text-[1.2rem] italic leading-relaxed text-foreground/90">
+            <p class="text-[0.74rem] uppercase tracking-airy text-muted-foreground font-medium">Written in the Stars</p>
+            <p class="mt-2 font-display text-[1.22rem] italic leading-relaxed text-foreground/95">
               &sim; From the majesty of Rajasthan to the timeless grace of Bihar, two worlds unite in sacred vows. &sim;
             </p>
             <img src="assets/rings-seashell-vignette.png" alt="Wedding rings and floral vignette" loading="lazy" width="1536" height="1024" class="mx-auto mt-6 w-52 object-contain"/>
@@ -434,13 +549,13 @@
         <div class="reveal" data-visible="false">
           <div class="text-center">
             <h2 class="font-display text-[2.35rem] leading-tight text-foreground">The Auspicious Beginnings</h2>
-            <p class="mt-2.5 max-w-xs mx-auto text-xs italic text-muted-foreground leading-relaxed">
-              ~ marked with peele chawal and divine prayers, we begin our wedding journey under Lord Ganesha's watchful grace ~
+            <p class="mt-2.5 max-w-sm mx-auto text-sm italic text-foreground/85 leading-relaxed font-normal">
+              ~ With joyful hearts and divine blessings, we begin our wedding celebrations surrounded by love, music &amp; cherished traditions ~
             </p>
-            <div class="flex items-center justify-center gap-3 py-6 text-primary/70">
-              <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
-              <span class="text-[0.7rem] tracking-airy">❖</span>
-              <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary/50"></span>
+            <div class="flex items-center justify-center gap-3 py-6 text-primary">
+              <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary"></span>
+              <span class="text-[0.75rem] tracking-airy font-bold">❖</span>
+              <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary"></span>
             </div>
           </div>
         </div>
@@ -451,15 +566,43 @@
           <li>
             <div class="reveal" data-visible="false">
               <article class="card-soft press p-5">
-                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
-                  <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">❋</span>
+                <!-- 1. Description (Top) -->
+                <p class="event-desc-top">~ marked with peele chawal and divine prayers, we begin our wedding journey under Lord Ganesha's watchful grace ~</p>
+                
+                <!-- 2. Event Name -->
+                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3 pb-2.5 border-b border-primary/20">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-primary/40 bg-primary/10 text-primary font-bold text-base">❋</span>
                   <div class="min-w-0">
-                    <h3 class="truncate font-display text-2xl">Peele Chawal</h3>
+                    <h3 class="truncate font-display text-2xl text-foreground font-medium">Peele Chawal</h3>
                   </div>
                 </div>
-                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">~ marked with peele chawal and divine prayers, we begin our wedding journey under Lord Ganesha's watchful grace ~</p>
-                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Friday, 20th November 2026 · 8:00 P.M.</p>
-                <p class="mt-1 text-sm text-foreground/85 font-medium">110-A, Kailash Puri, Tonk Road, Jaipur</p>
+
+                <!-- 3. Timing & Date (Structured & Centered) -->
+                <div class="event-timing-box">
+                  <p class="event-date-text">
+                    <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>Friday, 20th November 2026
+                  </p>
+                  <p class="event-time-text">
+                    <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>8:00 P.M.
+                  </p>
+                </div>
+
+                <!-- 4. Venue -->
+                <div class="event-venue-row">
+                  <svg class="w-4 h-4 shrink-0 mt-0.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span><strong class="font-bold text-primary">Venue:</strong> 110-A, Kailash Puri, Tonk Road, Jaipur</span>
+                </div>
               </article>
             </div>
           </li>
@@ -468,15 +611,43 @@
           <li>
             <div class="reveal" data-visible="false" style="transition-delay:50ms">
               <article class="card-soft press p-5">
-                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
-                  <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">❖</span>
+                <!-- 1. Description (Top) -->
+                <p class="event-desc-top">Beginning the sacred rituals with family blessings and traditional festivities.</p>
+                
+                <!-- 2. Event Name -->
+                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3 pb-2.5 border-b border-primary/20">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-primary/40 bg-primary/10 text-primary font-bold text-base">❖</span>
                   <div class="min-w-0">
-                    <h3 class="truncate font-display text-2xl">Sankdi Bindayak</h3>
+                    <h3 class="truncate font-display text-2xl text-foreground font-medium">Sankdi Bindayak</h3>
                   </div>
                 </div>
-                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">Beginning the sacred rituals with family blessings and traditional festivities.</p>
-                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Saturday, 21st November 2026 · 10:00 A.M. onwards</p>
-                <p class="mt-1 text-sm text-foreground/85 font-medium">110-A, Kailash Puri, Tonk Road, Jaipur</p>
+
+                <!-- 3. Timing & Date (Structured & Centered) -->
+                <div class="event-timing-box">
+                  <p class="event-date-text">
+                    <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg><span class="inline-block whitespace-nowrap">Saturday, 21st November 2026</span>
+                  </p>
+                  <p class="event-time-text">
+                    <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg><span class="inline-block whitespace-nowrap">10:00 A.M. onwards</span>
+                  </p>
+                </div>
+
+                <!-- 4. Venue -->
+                <div class="event-venue-row">
+                  <svg class="w-4 h-4 shrink-0 mt-0.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span><strong class="font-bold text-primary">Venue:</strong> 110-A, Kailash Puri, Tonk Road, Jaipur</span>
+                </div>
               </article>
             </div>
           </li>
@@ -485,15 +656,43 @@
           <li>
             <div class="reveal" data-visible="false" style="transition-delay:100ms">
               <article class="card-soft press p-5">
-                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
-                  <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">❁</span>
+                <!-- 1. Description (Top) -->
+                <p class="event-desc-top">&lsquo;Mehndi ki Mehek&rsquo; ~ an afternoon of color, conversation &amp; celebratory vibes ~</p>
+                
+                <!-- 2. Event Name -->
+                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3 pb-2.5 border-b border-primary/20">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-primary/40 bg-primary/10 text-primary font-bold text-base">❁</span>
                   <div class="min-w-0">
-                    <h3 class="truncate font-display text-2xl">Mehndi</h3>
+                    <h3 class="truncate font-display text-2xl text-foreground font-medium">Mehndi</h3>
                   </div>
                 </div>
-                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">&lsquo;Mehndi ki Mehek&rsquo; ~ an afternoon of color, conversation &amp; celebratory vibes ~</p>
-                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Sunday, 22nd November 2026 · Lunch 12:00 P.M. onwards</p>
-                <p class="mt-1 text-sm text-foreground/85 font-medium">Venue: 110-A, Kailash Puri, Tonk Road, Jaipur</p>
+
+                <!-- 3. Timing & Date (Structured & Centered) -->
+                <div class="event-timing-box">
+                  <p class="event-date-text">
+                    <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg><span class="inline-block whitespace-nowrap">Sunday, 22nd November 2026</span>
+                  </p>
+                  <p class="event-time-text">
+                    <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg><span class="inline-block whitespace-nowrap">Lunch: 12:00 P.M. onwards</span>
+                  </p>
+                </div>
+
+                <!-- 4. Venue -->
+                <div class="event-venue-row">
+                  <svg class="w-4 h-4 shrink-0 mt-0.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span><strong class="font-bold text-primary">Venue:</strong> 110-A, Kailash Puri, Tonk Road, Jaipur</span>
+                </div>
               </article>
             </div>
           </li>
@@ -502,15 +701,48 @@
           <li>
             <div class="reveal" data-visible="false" style="transition-delay:150ms">
               <article class="card-soft press p-5">
-                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
-                  <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">☀</span>
+                <!-- 1. Description (Top) -->
+                <p class="event-desc-top">Glow... Before the Vows ~ Music on, turmeric high, poolside vibes under the sky ~</p>
+                
+                <!-- 2. Event Name -->
+                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3 pb-2.5 border-b border-primary/20">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-primary/40 bg-primary/10 text-primary font-bold text-base">☀</span>
                   <div class="min-w-0">
-                    <h3 class="truncate font-display text-2xl">Haldi</h3>
+                    <h3 class="truncate font-display text-2xl text-foreground font-medium">Haldi</h3>
                   </div>
                 </div>
-                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">Glow... Before the Vows ~ Music on, turmeric high, poolside vibes under the sky ~</p>
-                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Monday, 23rd November 2026 · 5:30 P.M. onwards · Dinner: 7:30 P.M.</p>
-                <p class="mt-1 text-sm text-foreground/85 font-medium">Venue: Poolside, Hotel Clarks Amer, Jaipur</p>
+
+                <!-- 3. Timing & Date (Structured & Centered) -->
+                <div class="event-timing-box">
+                  <p class="event-date-text">
+                    <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg><span class="inline-block whitespace-nowrap">Monday, 23rd November 2026</span>
+                  </p>
+                  <div class="event-multitime-container">
+                    <p class="event-time-text">
+                      <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>Haldi: 5:30 P.M. onwards
+                    </p>
+                    <p class="event-time-secondary">
+                      Dinner: 7:30 P.M.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 4. Venue -->
+                <div class="event-venue-row">
+                  <svg class="w-4 h-4 shrink-0 mt-0.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span><strong class="font-bold text-primary">Venue:</strong> Poolside, Hotel Clarks Amer, Jaipur</span>
+                </div>
               </article>
             </div>
           </li>
@@ -519,15 +751,48 @@
           <li>
             <div class="reveal" data-visible="false" style="transition-delay:200ms">
               <article class="card-soft press p-5">
-                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
-                  <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">✧</span>
+                <!-- 1. Description (Top) -->
+                <p class="event-desc-top">Blessings from Nanihal ~ With dhol, chunari and open arms &mdash; honoring the love of our maternal roots ~</p>
+                
+                <!-- 2. Event Name -->
+                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3 pb-2.5 border-b border-primary/20">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-primary/40 bg-primary/10 text-primary font-bold text-base">✧</span>
                   <div class="min-w-0">
-                    <h3 class="truncate font-display text-2xl">Mayra</h3>
+                    <h3 class="truncate font-display text-2xl text-foreground font-medium">Mayra</h3>
                   </div>
                 </div>
-                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">Blessings from Nanihal ~ With dhol, chunari and open arms &mdash; honoring the love of our maternal roots ~</p>
-                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Tuesday, 24th November 2026 · 11:00 A.M. onwards · Lunch: 12:30 P.M.</p>
-                <p class="mt-1 text-sm text-foreground/85 font-medium">Venue: Swarna Mahal, Banquet Hall, Hotel Clarks Amer, Jaipur</p>
+
+                <!-- 3. Timing & Date (Structured & Centered) -->
+                <div class="event-timing-box">
+                  <p class="event-date-text">
+                    <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg><span class="inline-block whitespace-nowrap">Tuesday, 24th November 2026</span>
+                  </p>
+                  <div class="event-multitime-container">
+                    <p class="event-time-text">
+                      <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>Mayra: 11:00 A.M. onwards
+                    </p>
+                    <p class="event-time-secondary">
+                      Lunch: 12:30 P.M.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 4. Venue -->
+                <div class="event-venue-row">
+                  <svg class="w-4 h-4 shrink-0 mt-0.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span><strong class="font-bold text-primary">Venue:</strong> Swarna Mahal, Banquet Hall, Hotel Clarks Amer, Jaipur</span>
+                </div>
               </article>
             </div>
           </li>
@@ -536,15 +801,48 @@
           <li>
             <div class="reveal" data-visible="false" style="transition-delay:250ms">
               <article class="card-soft press p-5">
-                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
-                  <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">♫</span>
+                <!-- 1. Description (Top) -->
+                <p class="event-desc-top">Sip, Sing &amp; Celebrate ~ Ghoomar beats, modern treats and flowing drinks &mdash; let's celebrate royal style! ~</p>
+                
+                <!-- 2. Event Name -->
+                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3 pb-2.5 border-b border-primary/20">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-primary/40 bg-primary/10 text-primary font-bold text-base">♫</span>
                   <div class="min-w-0">
-                    <h3 class="truncate font-display text-2xl">Musical Night</h3>
+                    <h3 class="truncate font-display text-2xl text-foreground font-medium">Musical Night</h3>
                   </div>
                 </div>
-                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">Sip, Sing &amp; Celebrate ~ Ghoomar beats, modern treats and flowing drinks &mdash; let's celebrate royal style! ~</p>
-                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Tuesday, 24th November 2026 · 6:30 P.M. onwards · Cocktail &amp; Dinner: 7:30 P.M.</p>
-                <p class="mt-1 text-sm text-foreground/85 font-medium">Venue: Semal Bagh (Front Lawn), Hotel Clarks Amer, Jaipur</p>
+
+                <!-- 3. Timing & Date (Structured & Centered) -->
+                <div class="event-timing-box">
+                  <p class="event-date-text">
+                    <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg><span class="inline-block whitespace-nowrap">Tuesday, 24th November 2026</span>
+                  </p>
+                  <div class="event-multitime-container">
+                    <p class="event-time-text">
+                      <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>Musical Night: 6:30 P.M. onwards
+                    </p>
+                    <p class="event-time-secondary">
+                      Cocktail &amp; Dinner: 7:30 P.M.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 4. Venue -->
+                <div class="event-venue-row">
+                  <svg class="w-4 h-4 shrink-0 mt-0.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span><strong class="font-bold text-primary">Venue:</strong> Semal Bagh (Front Lawn), Hotel Clarks Amer, Jaipur</span>
+                </div>
               </article>
             </div>
           </li>
@@ -553,15 +851,43 @@
           <li>
             <div class="reveal" data-visible="false" style="transition-delay:300ms">
               <article class="card-soft press p-5">
-                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
-                  <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">❋</span>
+                <!-- 1. Description (Top) -->
+                <p class="event-desc-top">The ceremonial departure of the groom surrounded by family blessings.</p>
+                
+                <!-- 2. Event Name -->
+                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3 pb-2.5 border-b border-primary/20">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-primary/40 bg-primary/10 text-primary font-bold text-base">❋</span>
                   <div class="min-w-0">
-                    <h3 class="truncate font-display text-2xl">Nikaasi</h3>
+                    <h3 class="truncate font-display text-2xl text-foreground font-medium">Nikaasi</h3>
                   </div>
                 </div>
-                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">The ceremonial departure of the groom surrounded by family blessings.</p>
-                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Wednesday, 25th November 2026 · 4:30 P.M.</p>
-                <p class="mt-1 text-sm text-foreground/85 font-medium">Venue: 110-A, Kailash Puri, Tonk Road, Jaipur</p>
+
+                <!-- 3. Timing & Date (Structured & Centered) -->
+                <div class="event-timing-box">
+                  <p class="event-date-text">
+                    <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg><span class="inline-block whitespace-nowrap">Wednesday, 25th November 2026</span>
+                  </p>
+                  <p class="event-time-text">
+                    <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg><span class="inline-block whitespace-nowrap">4:30 P.M.</span>
+                  </p>
+                </div>
+
+                <!-- 4. Venue -->
+                <div class="event-venue-row">
+                  <svg class="w-4 h-4 shrink-0 mt-0.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span><strong class="font-bold text-primary">Venue:</strong> 110-A, Kailash Puri, Tonk Road, Jaipur</span>
+                </div>
               </article>
             </div>
           </li>
@@ -570,15 +896,43 @@
           <li>
             <div class="reveal" data-visible="false" style="transition-delay:350ms">
               <article class="card-soft press p-5">
-                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
-                  <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary/30 text-primary">❖</span>
+                <!-- 1. Description (Top) -->
+                <p class="event-desc-top">Baraat will assemble at Gokul Vatika and proceed to Rama Bagh, Hotel Clarks Amer.</p>
+                
+                <!-- 2. Event Name -->
+                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3 pb-2.5 border-b border-primary/20">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-primary/40 bg-primary/10 text-primary font-bold text-base">❖</span>
                   <div class="min-w-0">
-                    <h3 class="truncate font-display text-2xl">Baraat</h3>
+                    <h3 class="truncate font-display text-2xl text-foreground font-medium">Baraat</h3>
                   </div>
                 </div>
-                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">Baraat will assemble at Gokul Vatika and proceed to Rama Bagh, Hotel Clarks Amer.</p>
-                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Wednesday, 25th November 2026 · 6:00 P.M. sharp</p>
-                <p class="mt-1 text-sm text-foreground/85 font-medium">Assembly: Gokul Vatika, near Jawahar Circle</p>
+
+                <!-- 3. Timing & Date (Structured & Centered) -->
+                <div class="event-timing-box">
+                  <p class="event-date-text">
+                    <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg><span class="inline-block whitespace-nowrap">Wednesday, 25th November 2026</span>
+                  </p>
+                  <p class="event-time-text">
+                    <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg><span class="inline-block whitespace-nowrap">6:00 P.M. sharp</span>
+                  </p>
+                </div>
+
+                <!-- 4. Venue -->
+                <div class="event-venue-row">
+                  <svg class="w-4 h-4 shrink-0 mt-0.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span><strong class="font-bold text-primary">Venue:</strong> Gokul Vatika (Assembly) &rarr; Rama Bagh, Hotel Clarks Amer</span>
+                </div>
               </article>
             </div>
           </li>
@@ -586,16 +940,49 @@
           <!-- 9. Wedding & Panigrahan Sanskar -->
           <li>
             <div class="reveal" data-visible="false" style="transition-delay:400ms">
-              <article class="card-soft press p-5 border-primary/45 bg-secondary/30">
-                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
-                  <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-primary text-primary font-bold">☀</span>
+              <article class="card-soft press p-5 border-primary/30">
+                <!-- 1. Description (Top) -->
+                <p class="event-desc-top text-foreground/85">Written in the Stars ~ From the majesty of Rajasthan to the timeless grace of Bihar, two worlds unite in sacred vows ~</p>
+                
+                <!-- 2. Event Name -->
+                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3 pb-2.5 border-b border-primary/20">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-primary/40 bg-primary/10 text-primary font-normal text-base">☀</span>
                   <div class="min-w-0">
-                    <h3 class="truncate font-display text-2xl">Wedding &amp; Panigrahan</h3>
+                    <h3 class="truncate font-display text-2xl text-foreground font-normal">Wedding &amp; Panigrahan</h3>
                   </div>
                 </div>
-                <p class="mt-3 text-xs italic text-muted-foreground leading-relaxed">Written in the Stars ~ From the majesty of Rajasthan to the timeless grace of Bihar, two worlds unite in sacred vows ~</p>
-                <p class="mt-3 text-xs uppercase tracking-airy text-primary font-medium">Wednesday, 25th November 2026 · Dinner: 8:00 P.M. · Panigrahan: Midnight</p>
-                <p class="mt-1 text-sm text-foreground/90 font-medium">Venue: Rama Bagh, Hotel Clarks Amer, Jaipur</p>
+
+                <!-- 3. Timing & Date (Structured & Centered) -->
+                <div class="event-timing-box">
+                  <p class="event-date-text">
+                    <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg><span class="inline-block whitespace-nowrap">Wednesday, 25th November 2026</span>
+                  </p>
+                  <div class="event-multitime-container">
+                    <p class="event-time-text">
+                      <svg class="event-icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>Dinner: 8:00 P.M.
+                    </p>
+                    <p class="event-time-secondary">
+                      Panigrahan Sanskar: Midnight
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 4. Venue -->
+                <div class="event-venue-row">
+                  <svg class="w-4 h-4 shrink-0 mt-0.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span><strong class="font-bold text-primary">Venue:</strong> Rama Bagh, Hotel Clarks Amer, Jaipur</span>
+                </div>
               </article>
             </div>
           </li>
@@ -730,24 +1117,24 @@
             
             <!-- With Best Compliments -->
             <div class="card-soft p-5 text-center">
-              <p class="script text-lg text-primary">With Best compliments</p>
-              <div class="mt-3 space-y-1.5 font-display text-base text-foreground/90">
+              <p class="script text-lg text-primary font-bold">With Best compliments</p>
+              <div class="mt-3 space-y-1.5 font-display text-base text-foreground/90 font-medium">
                 <p>Shri Gopal Singh Chauhan</p>
                 <p>Shri Shurendra Singh Chauhan</p>
                 <p>Shri Sunil Chauhan</p>
-                <p class="text-primary font-medium pt-1">Chauhan Family</p>
+                <p class="text-primary font-bold pt-1">Chauhan Family</p>
               </div>
             </div>
 
             <!-- Showers of Love -->
             <div class="card-soft p-5 text-center">
-              <p class="script text-lg text-primary">Showers of love</p>
-              <div class="mt-3 space-y-1.5 font-display text-base text-foreground/90">
+              <p class="script text-lg text-primary font-bold">Showers of love</p>
+              <div class="mt-3 space-y-1.5 font-display text-base text-foreground/90 font-medium">
                 <p>Dr. R.K. Sharma <span class="text-xs text-muted-foreground font-sans">(Nana)</span></p>
                 <p>Kiran Sharma <span class="text-xs text-muted-foreground font-sans">(Nani)</span></p>
                 <p>Aditi - Mukul</p>
                 <p>Avni &amp; Diva</p>
-                <p>Udit</p>
+                <p class="font-bold text-foreground">Udit Chauhan</p>
               </div>
             </div>
 
@@ -760,9 +1147,9 @@
       <section class="px-6 pb-20">
         <div class="reveal" data-visible="false">
           <div class="card-soft p-6 text-center">
-            <p class="script text-lg text-primary">Save our date</p>
-            <p class="mt-2 text-sm text-muted-foreground">Add every ceremony to your calendar in one tap.</p>
-            <button id="add-to-calendar-btn" type="button" class="press mt-5 flex min-h-[52px] w-full items-center justify-center rounded-sm border border-primary/45 bg-secondary text-[0.68rem] uppercase tracking-airy text-foreground cursor-pointer font-medium">
+            <p class="script text-xl text-primary font-bold">Save our date</p>
+            <p class="mt-2 text-sm text-muted-foreground font-medium">Add every ceremony to your calendar in one tap.</p>
+            <button id="add-to-calendar-btn" type="button" class="press mt-5 flex min-h-[52px] w-full items-center justify-center rounded-sm border border-primary/45 bg-secondary text-[0.76rem] uppercase tracking-airy text-foreground cursor-pointer font-bold">
               Add all ceremonies to Calendar (.ics)
             </button>
           </div>
@@ -779,29 +1166,29 @@
 
         <div class="mx-auto flex min-h-[38rem] max-w-lg flex-col items-center justify-end px-7 pb-10 pt-32 text-center">
           <img src="assets/floral-spray.png" alt="" aria-hidden="true" loading="lazy" width="1024" height="1024" class="w-24 opacity-75"/>
-          <p class="mt-4 script text-lg text-primary">We joyfully request the pleasure of your company</p>
+          <p class="mt-4 script text-xl text-primary font-bold">We joyfully request the pleasure of your company</p>
           <h2 class="mt-4 font-display text-[2.65rem] leading-[1.05]">
-            Apurva <span class="script text-2xl text-primary">&amp;</span> Srishti
+            Apurva <span class="script text-2xl text-primary font-bold">&amp;</span> Srishti
           </h2>
           
           <div class="mt-7 grid w-full max-w-sm grid-cols-2 border-y border-primary/25 py-4 text-left">
             <div class="border-r border-primary/25 pr-5">
-              <p class="text-xs text-muted-foreground">The wedding</p>
-              <p class="mt-1 font-display text-lg">25 November 2026</p>
+              <p class="text-xs text-muted-foreground font-medium">The wedding</p>
+              <p class="mt-1 font-display text-lg font-medium">25 November 2026</p>
             </div>
             <div class="pl-5">
-              <p class="text-xs text-muted-foreground">The place</p>
-              <p class="mt-1 font-display text-lg">Jaipur, Rajasthan</p>
+              <p class="text-xs text-muted-foreground font-medium">The place</p>
+              <p class="mt-1 font-display text-lg font-medium">Jaipur, Rajasthan</p>
             </div>
           </div>
 
-          <button id="copy-link-btn" type="button" class="press mt-7 min-h-[48px] rounded-sm border border-primary/45 bg-background/70 px-6 text-[0.66rem] uppercase tracking-[0.2em] text-foreground backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 cursor-pointer font-medium">
+          <button id="copy-link-btn" type="button" class="press mt-7 min-h-[48px] rounded-sm border border-primary/45 bg-background/70 px-6 text-[0.72rem] uppercase tracking-[0.2em] text-foreground backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 cursor-pointer font-bold">
             Copy invitation link
           </button>
-          <p id="copy-status-text" aria-live="polite" class="mt-3 min-h-5 text-xs text-muted-foreground">Share this invitation</p>
+          <p id="copy-status-text" aria-live="polite" class="mt-3 min-h-5 text-xs text-muted-foreground font-medium">Share this invitation</p>
 
-          <p class="mt-8 text-xs leading-relaxed text-foreground/80">With love &amp; respect, from the Chauhan &amp; Singh families</p>
-          <p class="mt-1 text-[0.62rem] uppercase tracking-airy text-muted-foreground">110-A, Kailash Puri, Tonk Road, Jaipur</p>
+          <p class="mt-8 text-sm leading-relaxed text-foreground/90 font-medium">With love &amp; respect, from the Chauhan &amp; Singh families</p>
+          <p class="mt-1 text-[0.74rem] uppercase tracking-airy text-muted-foreground font-medium">110-A, Kailash Puri, Tonk Road, Jaipur</p>
         </div>
       </footer>
 
